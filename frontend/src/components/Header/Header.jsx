@@ -1,11 +1,8 @@
 const Header = () => {
     const scrollToMenu = () => {
-        const menuSection = document.getElementById('explore-menu');
+        const menuSection = document.getElementById('menu-section'); // Ensure this ID exists in your menu
         if (menuSection) {
-            window.scrollTo({
-                top: menuSection.offsetTop, // Scrolls to the menu section
-                behavior: 'smooth',
-            });
+            menuSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
