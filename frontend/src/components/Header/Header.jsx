@@ -1,12 +1,11 @@
-import React from 'react';
-import './Header.css';
-
 const Header = () => {
-    
     const scrollToMenu = () => {
-        const menuSection = document.getElementById('menu');
+        const menuSection = document.getElementById('explore-menu');
         if (menuSection) {
-            menuSection.scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo({
+                top: menuSection.offsetTop, // Scrolls to the menu section
+                behavior: 'smooth',
+            });
         }
     };
 
@@ -15,7 +14,6 @@ const Header = () => {
             <div className='header-contents'>
                 <h2>Order your favourite food here</h2>
                 <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
-                {/* Button with onClick event to trigger scroll */}
                 <button onClick={scrollToMenu}>View Menu</button>
             </div>
         </div>
