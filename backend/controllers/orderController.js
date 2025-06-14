@@ -5,7 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const currency = "usd";
 const deliveryCharge = 5;
-const frontend_URL = 'http://localhost:5173';
+const frontend_URL = 'https://food-del-frontend-preb.onrender.com';
 
 const placeOrder = async (req, res) => {
 
